@@ -2,6 +2,11 @@
 public class Recp {
 
 
+
+
+    //EXECUTAR O MAKE "  make -f T3.mk    "
+
+
     public static void mostrarResultado() {
         int[] vetor = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         boolean v[] = {true, false, true};
