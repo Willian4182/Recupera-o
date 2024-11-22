@@ -60,7 +60,7 @@ public class CorrecaoT3{
         boolean[] vb = {true, true, false, false};
         boolean[] retorno;
 
-        retorno = T3.aplicarELogico(va, vb);
+        retorno = T3.aplicarElogico(va, vb);
         mostrarVetor(retorno);
 
         System.out.println();
@@ -87,6 +87,7 @@ public class CorrecaoT3{
         int[] retorno1;
 
         retorno1 = T3.aplicarMascara(v1, mascara1);
+
         mostrarVetor(retorno1);
 
 
@@ -288,12 +289,22 @@ public class CorrecaoT3{
 
     }
 
-    public static void mostrarVetor(boolean v[]){
+    */
 
+
+    public static void mostrarVetor (int v[]){
+        for(int i=0; i<v.length;i++){
+            System.out.printf("%d ", v[i]);
+        }
+        System.out.println();
+    }
+    
+
+
+    public static void mostrarVetor(boolean v[]){
         for(int i=0; i<v.length;i++){
             System.out.printf("%b ", v[i]);
         }
         System.out.println();
-
-    }*/
+    }
 }

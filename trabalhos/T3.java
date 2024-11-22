@@ -1,5 +1,7 @@
 package trabalhos;
 
+import java.util.Arrays;
+
 public class T3 {
 
     //EXECUTAR O MAKE "     make -f T3.mk "
@@ -36,37 +38,69 @@ public class T3 {
         System.out.println();   
     }
 
-    public static void filtrarMaiores(int[] vetor, int valor) {
-        System.out.print(" [");
+    public static int[] filtrarMaiores(int[] vetor, int valor) {
+
+        int maiores[];
+        int cont = 0;
+        int x = 0;
+
+
+    
         for (int i = 0; i < vetor.length; i++) {
             
             if(vetor[i] > valor){
-                System.out.print(vetor[i]);
-            }
-            if(i < vetor.length -1){
-                System.out.print(", ");
-            }
-                     
+                cont ++;                         
+            }  
+
         }
 
-        System.out.println("] ");
-    }
+        maiores = new int[cont];
 
-    public static void mostrarMenores(int[] vetor, int valor) {
-        System.out.print(" [");
+        for (int i = 0; i < vetor.length; i++) {
+            
+            if(vetor[i] > valor){
+                maiores[x] = vetor[i];
+                x++;                       
+            }                     
+        }
+
+        return maiores;
+
+
+    } 
+
+    public static int[] filtrarMenores(int[] vetor, int valor) {
+
+        int menores[];
+        int cont = 0;
+        int x = 0;
+
+
+    
         for (int i = 0; i < vetor.length; i++) {
             
             if(vetor[i] < valor){
-                System.out.print(vetor[i]);
-            }
-            if(i < vetor.length -1){
-                System.out.print(", ");
-            }
-                     
+                cont ++;                         
+            }  
+
         }
 
-        System.out.println("] ");
+        menores = new int[cont];
+
+        for (int i = 0; i < vetor.length; i++) {
+            
+            if(vetor[i] < valor){
+                menores[x] = vetor[i];
+                x++;                       
+            }                     
+        }
+
+        return menores;
+
+
     }
+
+    
 
     public static void mostrarLogicos(boolean x[]) {
 
@@ -84,31 +118,33 @@ public class T3 {
         
     }
 
-    public static void aplicarElogico(boolean v[], boolean w[]){
+    public static boolean[] aplicarElogico(boolean v[], boolean w[]){
 
         boolean[] x = new boolean[v.length]; 
 
         for (int i = 0; i < x.length; i++) {
             x[i] = v[i] && w[i]; 
         }
-        mostrarLogicos(x);        
+        return x;
+    
     }
 
-    public static void aplicarOuLogico(boolean v[], boolean w[]){
+    public static boolean[] aplicarOuLogico(boolean v[], boolean w[]){
 
         boolean[] x = new boolean[v.length]; 
 
         for (int i = 0; i < x.length; i++) {
             x[i] = v[i] || w[i]; 
         }
-        mostrarLogicos(x);
+        return x;
     }
 
 
-    public static void aplicarMascara (int v[], boolean mascara[]) {
+    public static int[] aplicarMascara (int v[], boolean mascara[]) {
 
         int [] saida;
         int c = 0;
+        int x = 0;
 
         for (int i = 0; i < mascara.length; i++) {
             if(mascara[i] == true){
@@ -118,8 +154,14 @@ public class T3 {
 
         }
         saida = new int[c];
-        
-        System.out.println("True: " + c);               
 
+        for (int i = 0; i < mascara.length; i++) {
+            if(mascara[i] == true){
+                saida[x] = v[i];
+                x++;
+            }
+        }
+
+        return saida;             
     }
 }

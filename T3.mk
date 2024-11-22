@@ -7,5 +7,11 @@ t3-build:
 clear:
 	rm -rf bin
 
+git:
+	git config --global user.email "edu.cascacity@gmail.com"
+	git config --global user.name "Willian4182"
+	echo "iiuoiio"
+
+
 
 
