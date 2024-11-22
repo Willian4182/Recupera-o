@@ -108,6 +108,7 @@ public class Recp {
 
     public static void aplicarMascara (int v[], boolean mascara[]) {
 
+        int [] saida;
         int c = 0;
 
         for (int i = 0; i < mascara.length; i++) {
@@ -117,6 +118,8 @@ public class Recp {
             }
 
         }
+        saida = new int[c];
+        
         System.out.println("True: " + c);               
 
     }
