@@ -1,7 +1,5 @@
 package trabalhos;
 
-import java.util.Arrays;
-
 public class T3 {
 
     //EXECUTAR O MAKE "     make -f T3.mk "
@@ -164,4 +162,71 @@ public class T3 {
 
         return saida;             
     }
+
+    public static int[] uniao( int[] a, int[] b ) {
+
+        int[] u = new int[a.length + b.length];
+
+        if (u.length == 0) {
+            return u;
+        }
+
+        int[] vetorComElemUnicos;
+
+        int indiceb = 0;
+        int contElemUnicos = 0;
+        
+        for (int i = 0; i < a.length; i++) {
+            u[i] = a[i];           
+        }
+        
+        for (int i = a.length; i < u.length; i++) {
+            u[i] = b[indiceb];
+            indiceb++;
+        }  
+
+
+
+        for (int i = 0; i < u.length; i++) {
+            int elemAtual = u[i];
+            boolean existe = false;
+
+            for (int j = i+1; j < u.length; j++) {
+                if (u[j] == elemAtual) {
+                    existe = true;
+                    break;
+                }
+            }
+
+            if (existe == false) {
+                contElemUnicos++;
+            }
+        }
+
+        vetorComElemUnicos = new int[contElemUnicos];
+        int indiceVetorUnico = 0;
+
+
+        for (int i = 0; i < u.length; i++) {
+            int elemAtual = u[i];
+            boolean existe = false;
+
+            for (int j = i+1; j < u.length; j++) {
+                if (u[j] == elemAtual) {
+                    existe = true;
+                    break;
+                }
+            }
+
+            if (existe == false) {
+                vetorComElemUnicos[indiceVetorUnico] = u[i];
+                indiceVetorUnico++;
+            }
+        }
+
+    
+        return vetorComElemUnicos;
+    }
+
+
 }

@@ -7,9 +7,9 @@ public class CorrecaoT3{
         q3(); //Filtrar Menores
         q4(); //Aplicar e lógico
         q5(); //Aplicar ou lógico*/
-        q6(); //Aplicar Máscara
-        /*q7(); //União
-        q8(); //Interseção
+        //q6(); //Aplicar Máscara
+        q7(); //União
+        /*q8(); //Interseção
         q9(); //Diferença
         q10(); //Triangulo de Pascal
         q11(); //MatrizTransposta
@@ -94,47 +94,50 @@ public class CorrecaoT3{
         System.out.println();
     }
 
-    /*public static void q7(){
+
+    public static void q7(){
         System.out.println("## Questão 07 - União ##");
 
-        int[] va_1 = {1, 2, 3, 4};
-        int[] vb_1 = {6, 7, 8, 9};
-        int[] retorno_1;
+        // int[] va_1 = {1, 2, 3, 4};
+        // int[] vb_1 = {6, 7, 8, 9};
+        // int[] retorno_1;
 
-        retorno_1 = T3.uniao(va_1, vb_1);
-        mostrarVetor(retorno_1);
+        // retorno_1 = T3.uniao(va_1, vb_1);
+        // mostrarVetor(retorno_1);
 
-        int[] va_2 = {1, 2, 3, 4, 5, 6, 7};
-        int[] vb_2 = {5, 6, 7, 8, 9, 10};
-        int[] retorno_2;
+        // int[] va_2 = {1, 2, 3, 4, 5, 6, 7};
+        // int[] vb_2 = {5, 6, 7, 8, 9, 10};
+        // int[] retorno_2;
 
-        retorno_2 = T3.uniao(va_2, vb_2);
-        mostrarVetor(retorno_2);
+        // retorno_2 = T3.uniao(va_2, vb_2);
+        // mostrarVetor(retorno_2);
 
-        int[] va_3 = {1, 1, 1, 1};
-        int[] vb_3 = {2, 2, 2, 2};
-        int[] retorno_3;
+        // int[] va_3 = {1, 1, 1, 1};
+        // int[] vb_3 = {2, 2, 2, 2};
+        // int[] retorno_3;
 
-        retorno_3 = T3.uniao(va_3, vb_3);
-        mostrarVetor(retorno_3);
+        // retorno_3 = T3.uniao(va_3, vb_3);
+        // mostrarVetor(retorno_3);
 
-        int[] va_4 = {1, 1, 1, 1};
-        int[] vb_4 = {};
-        int[] retorno_4;
+        // int[] va_4 = {1, 1, 1, 1};
+        // int[] vb_4 = {};
+        // int[] retorno_4;
 
-        retorno_4 = T3.uniao(va_4, vb_4);
-        mostrarVetor(retorno_4);
+        // retorno_4 = T3.uniao(va_4, vb_4);
+        // mostrarVetor(retorno_4);
 
         int[] va_5 = {};
         int[] vb_5 = {};
         int[] retorno_5;
 
-        retorno_5 = T3.uniao(va_4, vb_5);
+        retorno_5 = T3.uniao(va_5, vb_5);
         mostrarVetor(retorno_5);
 
 
         System.out.println();
     }
+
+    /*
 
     public static void q8(){
         System.out.println("## Questão 08 - Interseção ##");
@@ -293,18 +296,21 @@ public class CorrecaoT3{
 
 
     public static void mostrarVetor (int v[]){
+        System.out.print("[");
         for(int i=0; i<v.length;i++){
             System.out.printf("%d ", v[i]);
         }
-        System.out.println();
+        System.out.println("]");
     }
     
 
 
     public static void mostrarVetor(boolean v[]){
+        System.out.print("[");
         for(int i=0; i<v.length;i++){
             System.out.printf("%b ", v[i]);
         }
         System.out.println();
+        System.out.println("]");
     }
 }
